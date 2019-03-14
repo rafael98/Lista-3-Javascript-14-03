@@ -1,0 +1,98 @@
+body{
+    width: 1200px;
+    height: 1200px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: white;
+}
+header{
+    height: 10%;
+    width: 100%;
+    border: 0px solid black;
+    float: left;
+}
+
+nav{
+    height: 90%;
+    width: 10%;
+    border: 1px solid black;
+    float: left;
+}
+.conteudo{
+    width: 89%;
+    height: 90%;
+    border: 1px solid black;
+    float: left ;
+}
+
+.figuras{
+    width: 89%;
+    height: 90%;
+    border: 1px solid black;
+    float: left ;
+}
+
+footer{
+    height: 10%;
+    width: 100%;
+    float: left;
+    border: 1px solid black;
+}
+
+/*-------
+Questão 1
+--------*/
+
+.fundo {
+background-color:#FFFFFF;    
+}
+
+.fundoAzul {
+background-color:#0000FF;    
+}
+
+.fundoAmarelo {
+background-color:#FFFF00;    
+}
+
+.fundoVerde {
+background-color:#008000;    
+}
+
+.fundoVermelho {
+background-color:#FF0000;    
+}
+
+
+
+/*-------
+Questão 3
+--------*/
+
+div#azul {
+background-color:blue;
+}
+
+
+/*-------
+Questão 4
+--------*/
+
+.hidden {
+display:none;
+}
+input{
+display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+

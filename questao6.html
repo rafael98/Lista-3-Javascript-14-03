@@ -1,0 +1,68 @@
+<html>
+
+<head>
+
+	<title>Lista 3</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo_pagina.css">
+    <script type="text/javascript" scr="estilo_pagina.css"></script>
+
+
+	<style>
+	</style>
+
+            <!------------------------Código Javascript-----------------------
+            Comando para identificar se a palavra é palidromo ou não! ------->
+    <script>
+
+            var Palavra = prompt("Escreva uma palavra");
+              function Palindromo(Palavra){
+                  Palavra=Palavra.toLowerCase().replace(/\s/g,"");
+                  MostraReverse=Palavra.split("").reverse().toString();
+                    for (var i = 0; i < ((MostraReverse.length)-1); i++) {
+                      MostraReverse=MostraReverse.replace(",","");
+                    }; 
+                      if(Palavra==MostraReverse){ 
+                        alert (resultado="É um palindromo!");
+                      }
+                      else{   
+                        alert (resultado="não é um palindromo!");
+                      }
+              }
+                        Palindromo(Palavra);
+    </script>
+
+
+</head>
+
+
+    <header>
+       <center> <h3> Lista 3 - Aluno: Rafael Tavares </h3> </center>
+
+    </header>
+
+     			<div class="conteudo">
+     					<h3> Questão 6 </h3>
+
+            <!------------------------Código HTML-----------------------
+            Digite a palavra para saber se é palidromo ou não ! ------->
+
+             <h4> Quer saber se uma palavra é palindromo? </h4>
+
+              <ul>
+
+                <li>
+                  <a href="questao6.html">
+                         Clique aqui e digite a palavra
+                  </a>
+                 </li>
+			    </div>
+
+	<footer>
+        <small>Todos os direitos reservados</small>
+    </footer>
+
+<body>
+</body>
+
+</html>

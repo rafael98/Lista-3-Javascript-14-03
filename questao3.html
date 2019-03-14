@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+<title>Lista 3</title>
+<meta charset="utf-8">
+
+
+<!--------------------------------------------------------
+                      Código Javascript
+---------------------------------------------------------->
+
+<!------Array com as cores para trocar a cor de fundo da página--------->
+    <script>
+
+      function trocaCor(cor) {
+        switch(cor){
+          case'Azul': document.bgColor = "blue";break;
+          case'Amarelo': document.bgColor = "yellow";break;
+          case'Verde': document.bgColor = "green";break;
+          case'Vermelho': document.bgColor = "red";break;
+        }
+      }
+    </script>
+
+
+</head>
+<body>
+              <!--------------------------------------------------------
+                                    Código HTML
+              ---------------------------------------------------------->
+            <center> <h3> Lista 3 - Aluno: Rafael Tavares </h3> </center>
+
+              <br>
+                <h4> Questão 3 </h4>
+                <h4> Selecione a cor desejada: </h4>
+
+                    <!------Caixa de seleção para escolher cor desejada--------->
+
+                    <select name="selecionaCor">
+                        <option value=""  onclick="">Selecione</option>
+                        <option value="azul"  onclick="trocaCor('Azul');">Azul</option>
+                        <option value="Amarelo" onclick="trocaCor('Amarelo');">Amarelo</option>
+                        <option value="Verde" onclick="trocaCor('Verde');">Verde</option>
+                        <option value="Vermelho" onclick="trocaCor('Vermelho');">Vermelho</option>
+                    </select>
+ 
+ </body>
+ </html>

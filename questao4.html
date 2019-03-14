@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+	<title>Lista 3</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo_pagina.css">
+    <script type="text/javascript" scr="estilo_pagina.css"></script>
+
+
+	<style>
+	</style>
+
+                <!----------------------------------
+                Questão 4
+                Colocar o texto MOSTRAR/OCULTAR
+                --------------------------------------->
+                <script>
+                    function mostra(id){
+                      if (document.getElementById(id).style.display =='block'){
+                          document.getElementById(id).style.display = 'none';
+                          document.getElementById('b'+ id).value="Mostar";
+                        }else { document.getElementById(id).style.display ='block';
+                          document.getElementById('b'+ id).value="Ocultar";
+                        }
+                    }
+                </script>
+
+
+</head>
+
+  <header>
+
+       <center> <h3> Lista 3 - Aluno: Rafael Tavares </h3> </center>
+
+  </header>
+       
+        <nav>
+          <ul>
+	       	<li>
+	           <a href="questao4.html">
+			               Voltar
+	           </a>
+          </li>
+        </nav>
+
+                  <!----------------------------------
+                Botão para MOSTRAR/OCULTAR o texto 
+                --------------------------------------->
+
+     			<div class="conteudo">
+     					<h3> Questão 4 </h3>
+               <br>
+                  <div id="txt1" class="hidden">
+                        Texto 1 <br> Aula 1 - JavaScript - 07/03/2019.
+                  </div>
+                    <br>
+                    <input id="btxt1" type="button"  value ="Mostrar" onClick="mostra('txt1')" />
+    			</div>
+
+
+	  <footer>
+        <small>Todos os direitos reservados</small>
+    </footer>
+
+
+
+<body>
+</body>
+
+</html>

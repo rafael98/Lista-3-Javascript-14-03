@@ -1,0 +1,183 @@
+<html>
+
+<head>
+
+  <title>Lista 3</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo_pagina.css">
+
+
+	<style>
+	</style>
+
+
+      <!----------------------Mensagem ao clicar em enviar--------------->
+
+    	<script>
+      		function Salve()
+      		{alert("Salvo com sucesso");}
+    	</script>
+
+
+
+<script type="text/javascript">
+  
+  	/* ----------------------------------------------------------- */ 
+ 	/* adiciona mascara do numero1 */                                
+        	function MascaraNum(num){
+            	if(mascaraInteiro(num)==false){
+            		event.returnValue = false;
+            	}       
+            		return formataCampo(num, '0000000000', event);
+        	}
+
+	/* valida o numero1 */
+        	function ValidaNum(num){
+            	exp = /\d{2}\.\d{3}\-\d{3}/
+            	if(!exp.test(num.value))
+            	alert('Número Inválido!');               
+        	}
+
+	/* -------------------------------------------------------------*/ 
+	/* adiciona mascara do numero2 */                                
+        	function MascaraNum2(num2){
+            	if(mascaraInteiro(num2)==false){
+            		event.returnValue = false;
+            	}       
+            	return formataCampo(num2, '0000000000', event);
+        	}
+
+	/* valida o numero2 */
+        	function ValidaNum2(num2){
+            	exp = /\d{2}\.\d{3}\-\d{3}/
+            	if(!exp.test(num2.value))
+            	alert('Número Inválido!');               
+        	}
+
+	/* -------------------------------------------------------------*/ 
+	/* adiciona mascara do numero3 */                                
+        	function MascaraNum3(num3){
+            	if(mascaraInteiro(num3)==false){
+            		event.returnValue = false;
+            	}       
+            	return formataCampo(num3, '0000000000', event);
+        	}
+
+	/* valida o numero3 */
+        	function ValidaNum3(num3){
+            	exp = /\d{2}\.\d{3}\-\d{3}/
+            	if(!exp.test(num3.value))
+            	alert('Número Inválido!');               
+        	}
+
+
+	/* -------------------VALIDAÇÃO DOS CAMPOS----------------------- *
+
+ 	/* valida numero inteiro com mascara */
+          	function mascaraInteiro(){
+              	if (event.keyCode < 48 || event.keyCode > 57){
+              		event.returnValue = false;
+              		return false;
+              	}
+              	return true;
+          	}
+
+ 	/* formatar os campos */
+          	function formataCampo(campo, Mascara, evento) { 
+              	var boleanoMascara; 
+
+              	var Digitato = evento.keyCode;
+              	exp = /\-|\.|\/|\(|\)| /g
+              	campoSoNumeros = campo.value.toString().replace( exp, "" ); 
+
+              	var posicaoCampo = 0;    
+              	var NovoValorCampo="";
+              	var TamanhoMascara = campoSoNumeros.length;; 
+
+            	if (Digitato != 8) { // backspace 
+                	for(i=0; i<= TamanhoMascara; i++) { 
+                        boleanoMascara  = ((Mascara.charAt(i) == "-") || (Mascara.charAt(i) == ".")
+                                                                || (Mascara.charAt(i) == "/")) 
+                        boleanoMascara  = boleanoMascara || ((Mascara.charAt(i) == "(") 
+                                                                || (Mascara.charAt(i) == ")") || (Mascara.charAt(i) == " ")) 
+                        if (boleanoMascara) { 
+                                NovoValorCampo += Mascara.charAt(i); 
+                                  TamanhoMascara++;
+                        }else { 
+                                NovoValorCampo += campoSoNumeros.charAt(posicaoCampo); 
+                                posicaoCampo++; 
+                         }              
+                }      
+                		campo.value = NovoValorCampo;
+                  		return true; 
+              			}else { 
+                		return true; 
+            			}
+         	}
+</script>
+
+
+
+</head>
+
+<header>
+       <center> <h3> Lista 3 - Aluno: Rafael Tavares </h3> </center>
+
+</header>
+       
+        <nav>
+          <ul>
+
+	       	<li>
+	           <a href="questao10.html">
+			                   Voltar
+	           </a>
+            </li>
+        </nav>
+
+
+     			<div class="conteudo">
+     					<h3> Questão 10 </h3>
+           
+
+           			<!----Formulário: digitar 3 números formatados--->
+           				Digite 3 números:
+           				<br> <br>
+
+                      <form = name=">
+
+                        <label class="control-label col-sm-2 " for="num">Número 1: </label>
+                          <div class="col-sm-3">
+                          <input type="text" name="num" onKeyPress="MascaraNum(form1.num);" maxlength="10" onBlur="ValidaNum(form1.Num);">
+                        </div>
+
+                        <br>
+                        <label class="control-label col-sm-2 " for="num2">Número 2: </label>
+                          <div class="col-sm-3">
+                          <input type="text" name="num2" onKeyPress="MascaraNum2(form1.num2);" maxlength="10" onBlur="ValidaNum2(form1.Num2);">
+                        </div>
+
+                        <br>
+                        <label class="control-label col-sm-2 " for="num3">Número 3: </label>
+                          <div class="col-sm-3">
+                          <input type="text" name="num3" onKeyPress="MascaraNum3(form1.num3);" maxlength="10" onBlur="ValidaNum3(form1.Num3);">
+                        </div>
+
+                        <br>
+                        <div>
+                          <input type="submit" onclick="Salve()" value="Salvar" />
+                        </div>
+
+                      </form>
+				</div>
+
+
+	<footer>
+        <small>Todos os direitos reservados</small>
+    </footer>
+
+
+<body>
+</body>
+
+</html>
