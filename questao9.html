@@ -1,0 +1,83 @@
+<html>
+
+<head>
+
+	<title>Lista 3</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="estilo_pagina.css">
+    <script type="text/javascript" scr="estilo_pagina.css"></script>
+    
+
+
+            <!--------------------------------------------------------
+                                CÓDIGO JAVASCRIPT 
+
+               - Intercalar duas palavras digitadas
+            ---------------------------------------------------------->
+
+       <script type="text/javascript">
+       	
+       		function Juntar() {
+    			document.getElementById('n3').value = "";
+    			var campo1 = document.getElementById('n1').value;
+    			var campo2 = document.getElementById('n2').value;
+
+    				if (campo1.length < campo2.length) {
+        				var imp = campo2.length;
+
+    				} else {
+        					var imp = campo1.length;
+    				}
+
+    			for (i = 0; i < imp; i++) {
+        			document.getElementById('n3').value += campo1.substring(i, i + 1) + campo2.substring(i, i + 1);
+    			}
+			}
+
+       </script>
+   
+
+
+</head>
+
+            <!--------------------------------------------------------
+                                CÓDIGO HTML
+            ---------------------------------------------------------->
+<header>
+       <center> <h3> Lista 3 - Aluno: Rafael Tavares </h3> </center>
+
+</header>
+       
+        <nav>
+          <ul>
+
+	       	<li>
+	           <a href="questao9.html">
+			                   Voltar
+	           </a>
+            </li>
+        </nav>
+
+
+<div class="conteudo">
+<h3> Questão 9 </h3>
+
+			<form>
+				Nome: <input id="n1" type="text"><br>
+                Nome: <input id="n2" type="text" onchange="javascript:Juntar();"><br>
+                Impressão: <input id="n3" type="text" disabled>
+            </form>
+
+
+
+</div>
+
+
+	<footer>
+        <small>Todos os direitos reservados</small>
+    </footer>
+
+<body>
+</body>
+
+</html>
